@@ -1,0 +1,68 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#menu {
+  background-color: black;
+  height: 100%;
+  width: 200px;
+}
+
+#menu li:nth-child(3) {
+  font-size: 0.8em;
+  margin-left: 2em;
+}
+
+#menu a{
+  color: white;
+  padding-top: 1em;
+  padding: 1em 1em 1em 0;
+  display: block;
+  font-size: 1.1em;
+}
+
+#menu a:hover {
+  color: yellow;
+}
+
+#instalacoes a:hover {
+  color: red;
+}
+
+.info h1, .about h1 {
+  font-size: 1.5em;
+}
+
+.about, .info {
+  text-align: center;
+}
+
+#instalacoes {
+
+  text-align: center;
+  font-size: 1.5em;
+}
+
+
+#instalacoes li {
+  list-style: none;
+  padding: 1em;
+  margin: 1em;
+
+}
+
+img {
+  width: 300px;
+  margin: 1em;
+}
+
+p {
+  font-family: "Georgia", serif;
+  line-height: 1.4em;
+  padding: 1em;
+}
