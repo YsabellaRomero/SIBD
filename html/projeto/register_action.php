@@ -18,15 +18,18 @@
 
   $mem_num = $_POST['mem_num'];
   $email = $_POST['email'];
-  $pasword = $_POST['password'];
+  $password = $_POST['password'];
+
 
   // authenticate user
-  function insertUser($password) {
+  function insertUser($password,$mem_num) {
     global $dbh;
-    $stmt = $dbh->prepare('UPDATE Dados_Utilizador set password values (?) where numero_conta = (?))');
+    $stmt = $dbh->prepare('UPDATE Dados_Utilizador set password  = (?) where numero_conta = (?)');
     $stmt->execute(array($password, $mem_num));
+    var_dump($password);
+    var_dump($mem_num);
   }
-  insertUser($password);
+  insertUser($password,$mem_num);
 
   echo "Hello $email! You are now logged in!";
 
