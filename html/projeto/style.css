@@ -48,13 +48,54 @@ a {
   font-size: 1.5em;
 }
 
-
-#instalacoes li {
+#instalacoes li{
   list-style: none;
   padding: 1em;
   margin: 1em;
 
 }
+
+.instalacoes_info li {
+  float: left;
+}
+
+.instalacoes_info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.instalacoes_info a, .dropbtn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+      display: block;
+    }
+
 
 img {
   width: 300px;
