@@ -12,7 +12,7 @@
     <?php include("menu.php"); ?>
 
     <aside id="register">
-      <form action="/register_action.php" method="post">
+      <form action="register_action.php" method="post">
 
         <label for="mem_num">Membership Number</label>
         <input type="text" id="mem_num" name="mem_num">
