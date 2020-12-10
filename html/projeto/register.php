@@ -1,3 +1,8 @@
+<?php
+      session_start();
+      $msg = $_SESSION["msg"];
+      unset($_SESSION["msg"]);
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -22,6 +27,7 @@
         <br>
         <input type="submit" value="Create">
       </form>
+      <span><?php echo $msg; ?></span>
     </aside>
 
   </body>
