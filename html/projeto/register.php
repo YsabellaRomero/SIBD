@@ -17,9 +17,6 @@
         <label for="mem_num">Membership Number</label>
         <input type="text" id="mem_num" name="mem_num">
         <br>
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email">
-        <br>
         <label for="pwd">Password</label>
         <input type="password" id="pwd" name="password">
         <br>

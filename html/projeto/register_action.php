@@ -1,10 +1,8 @@
 <?php
 
-  $dbh = new PDO('sqlite:sql/ginasio.db');
+  $dbh = new PDO('sqlite:./sql/ginasio.db');
   $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-  include("menu.php");
 
   /*//verificar se utilizador já está na base de DADOS
 
@@ -17,20 +15,23 @@
 
 
   $mem_num = $_POST['mem_num'];
-  $email = $_POST['email'];
   $password = $_POST['password'];
 
 
   // authenticate user
-  function insertUser($password,$mem_num) {
+  function insertPass($password,$mem_num) {
     global $dbh;
-    $stmt = $dbh->prepare('UPDATE Dados_Utilizador set password  = (?) where numero_conta = (?)');
+    $stmt = $dbh->prepare('UPDATE Socio set password  = (?) where ID = (?)');
     $stmt->execute(array($password, $mem_num));
-    var_dump($password);
-    var_dump($mem_num);
+    //var_dump($password);
+    //var_dump($mem_num);
   }
-  insertUser($password,$mem_num);
+  insertPass($password,$mem_num);
 
-  echo "Hello $email! You are now logged in!";
+  header('Location: login.php');
+
+  include("menu.php");
+
+  //echo "Hello $email! You are now logged in!";
 
 ?>
