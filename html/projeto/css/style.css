@@ -48,11 +48,28 @@ a {
   font-size: 1.5em;
 }
 
-#instalacoes li{
+#instalacoes .list{
   list-style: none;
-  padding: 1em;
-  margin: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+#instalacoes .list article {
+  background-color: var(--background-color-dark);
+  padding: 1em; margin: 1em;
+  flex-grow: 1;
+
+  display: grid;
+  justify-items: center;
+}
+
+#instalacoes .list article h3 {
+  margin: 0;
+}
+
+#instalacoes .list article img {
+  border: 1px solid #333;
+  margin: 1em;
 }
 
 .instalacoes_info li {
@@ -92,9 +109,23 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown:hover .dropdown-content {
-      display: block;
-    }
+#contactos .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contactos .list article {
+  background-color: var(--background-color-dark);
+  padding: 1em; margin: 1em;
+  flex-grow: 1;
+
+  display: grid;
+  justify-items: center;
+}
+
+#contactos .list article h3 {
+  margin: 0;
+}
 
 
 img {

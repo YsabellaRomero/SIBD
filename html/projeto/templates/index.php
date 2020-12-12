@@ -1,15 +1,9 @@
-<!DOCTYPE html>
+<?php
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Ginasio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet">
-  <link href="layout.css" rel="stylesheet">
-</head>
-<body>
-  <?php include("menu.php"); ?>
+  $title = "Página Inicial";
+  include("menu.php");
+
+?>
 
   <header>
     <h1> M.Y. Space</h1>

@@ -1,20 +1,3 @@
-<?php
-
-  $dbh = new PDO('sqlite:sql/ginasio.db');
-  $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_BOTH);
-  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-  try {
-    $stmt = $dbh->prepare('SELECT * FROM Contacto');
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-  } catch(PDOException $e) {
-    echo $e->getMessage();
-    exit(0);
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

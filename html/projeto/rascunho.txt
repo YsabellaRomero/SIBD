@@ -1,5 +1,0 @@
-<?php foreach($result as $row) { ?>
-  <li>
-    <a href=""><?php echo $row["localizacao"] ?></a>
-  </li>
-<?php } ?>

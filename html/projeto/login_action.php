@@ -1,6 +1,6 @@
 <?php
 
-  include("menu.php");
+  require_once('config/init.php');
 
   $email = $_POST['email'];
   $pasword = $_POST['password'];

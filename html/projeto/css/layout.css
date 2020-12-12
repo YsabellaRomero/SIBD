@@ -16,23 +16,23 @@ body {
 }
 
 
-.info, #login, #register, #instalacoes, .about_us, .instalacoes_info {
+/*.info, #login, #register, #instalacoes, .about_us, .instalacoes_info {
   grid-area: stuff / middle / finish / end;
   margin-top: 0;
-}
+}*/
 
-.info, #login, #register, .about_us {
+.info, #login, #register, .about_us, #contactos {
   margin-left: 20em;
 }
 
-.instalacoes_info {
+.instalacoes_info, #contactos {
   margin-left: 1em;
 }
 
 #instalacoes  {
-  margin-left: 13.5em;
-
-  /*display: flex;*/
+  margin-left: 10.5em;
+  display: flex;
+  flex-wrap: wrap;
   justify-items: center;
 }
 
@@ -40,14 +40,4 @@ body > header {
   margin-left: 20em;
   grid-area: header / middle / stuff / end;
   text-align: center;
-}
-
-#instalacoes li{
-  /*flex-direction: column;
-  align-items: center;*/
-  /*display: block;
-  flex-grow: 1*/
-  padding: 1em; margin: 1em;
-  flex-grow: 1;
-
 }

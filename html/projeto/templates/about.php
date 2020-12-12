@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>About us</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-  </head>
-  <body>
+<?php
 
-    <?php include("menu.php"); ?>
+  $title = "Sobre a cadeia de ginásios M.Y. Space";
+  include("menu.php");
+
+?>
 
     <header>
       <h1>Sobre Nós</h1>
