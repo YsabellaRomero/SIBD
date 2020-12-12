@@ -2,16 +2,16 @@
 
   $title = "Lista de Instalações";
   include("menu.php");
-?>
 
-    <header>
-      <h1>As nossas instalações</h1>
-    </header>
+  include('./database/Instalacoes.php');g
+  $instalacoes = getAllInstalacoes();
+
+?>
       <div id="instalacoes">
         <section class="list">
           <?php foreach($instalacoes as $row) { ?>
             <article>
-              <h3><a href="../list_instalacoes.php?id=<?php $instalacao['id']?>"><?php $row["localizacao"]?></a></h3>
+              <h3><a href="../list_instalacoes.php"><?php $row["localizacao"]?></a></h3>
               <img src="imagens/<?=$row["localizacao"] ?>/lobbie.jpg">
             </arcticle>
           <?php } ?>
