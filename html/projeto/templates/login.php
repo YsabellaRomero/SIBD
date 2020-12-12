@@ -1,5 +1,9 @@
 <?php
 
+  session_start();
+  $msg = $_SESSION["msg"];
+  unset($_SESSION["msg"]);
+
   $title = "Página Login";
   include("menu.php");
 
