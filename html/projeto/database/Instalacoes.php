@@ -3,7 +3,7 @@
   require_once('./config/init.php');
 
   try {
-    function getAllInstacoes() {
+    function getAllInstalacoes() {
       global $dbh;
       $stmt = $dbh->prepare("SELECT * FROM Instalacao");
       $stmt->execute();

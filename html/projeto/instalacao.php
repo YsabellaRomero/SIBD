@@ -1,7 +1,9 @@
 <?php
+  require_once('config/init.php');
+
   include('database/Instalacoes.php');
 
-  $instalacoes = getAllInstacoes();
+  $instalacoes = getAllInstalacoes();
 
   $title = "Lista de Instalações";
   include("templates/menu.php");
