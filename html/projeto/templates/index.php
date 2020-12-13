@@ -1,4 +1,7 @@
 <?php
+  session_start();
+  $msg = $_SESSION["msg"];
+  unset($_SESSION["msg"]);
 
   $title = "Página Inicial";
   include("menu.php");
@@ -14,6 +17,8 @@
       Sed sed nisl a purus dignissim auctor a eu eros. Quisque nec est non lectus iaculis vehicula. In fermentum varius sem, a mollis felis feugiat placerat. Cras cursus gravida efficitur. Etiam molestie vehicula nunc, non efficitur libero fringilla quis. Aenean sit amet est posuere, rutrum tortor sed, vulputate metus. Integer et velit eget elit pulvinar ullamcorper vel ut urna. Fusce condimentum quam velit, eu suscipit turpis mattis sed. Vivamus sit amet mollis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam mattis nulla id augue bibendum feugiat. Proin blandit hendrerit tellus, ut condimentum magna tempus sit amet. In hac habitasse platea dictumst.
     </p>
   </div>
+
+  <span><?php echo $msg; ?></span>
 
 </body>
 </html>
