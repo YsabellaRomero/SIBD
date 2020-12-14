@@ -13,7 +13,7 @@ a {
   width: 200px;
 }
 
-#menu li:nth-child(3) {
+#menu li:nth-child(5) {
   font-size: 0.8em;
   margin-left: 2em;
 }
@@ -28,6 +28,10 @@ a {
 
 #menu a:hover {
   color: yellow;
+}
+
+#menu span{
+  color:white;
 }
 
 #instalacoes a:hover {

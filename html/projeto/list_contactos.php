@@ -1,15 +1,16 @@
 <?php
 
+  require_once('config/init.php');
   require_once('database/Contactos.php');
+  require_once('database/Instalacoes.php');
 
-  $instalacao = $_GET['Instalacao'];
+  $id = $_GET['id'];
 
-  $contactos = getInstalacoesById($instalacao);
+  $localizacao = getInstalacoesById($id);
+  $contactos = getContactosByInstalacao($id);
 
-  $products = getContactosByInstalacao($instalacao);
-
+  $title = "Contactos da Instalação x";
   include('templates/menu.php');
-  //include('templates/header.php');
-  //include('templates/list_products.php');
-  //include('templates/footer.php');
+  include('templates/contactos.php');
+
 ?>

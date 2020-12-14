@@ -5,10 +5,9 @@
 
   $instalacoes = getAllInstalacoes();
 
-  include("templates/list_instalacoes.php");
-
-
   $title = "Lista de Instalações";
   include("templates/menu.php");
+
+  include("templates/list_instalacoes.php");
 
 ?>

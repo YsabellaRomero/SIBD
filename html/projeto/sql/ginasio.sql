@@ -103,7 +103,7 @@ insert into Contacto(email, numero_telemovel, diretor, gerente, instalacao) valu
 -------------------------------------------------------sócios-------------------------------------------------------------------------------
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456789, 'Ysabella Romero', 987654321, 'ysabellaromero@my_space.com');
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456788, 'Maria Sanches', 987654322, 'mariasanches@my_space.com');
-insert into Pessoa(NIF, name, numero_telemovel, email) values (123456787, 'Heber Ribeiro', 987654323, 'heberribeiroo@my_space.com');
+insert into Pessoa(NIF, name, numero_telemovel, email) values (123456787, 'Heber Ribeiro', 987654323, 'heberribeiro@my_space.com');
 insert into Pessoa(NIF, name, email)									 values (123456786, 'Simao Quintans', 'simaoquintans@my_space.com');
 insert into Pessoa(NIF, name, email) 									 values (123456785, 'Francisco Alves', 'franciscoalves@my_space.com');
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456784, 'Alexandre Brás', 987654324, 'alexandrebras@my_space.com');

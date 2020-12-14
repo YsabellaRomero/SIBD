@@ -1,5 +1,4 @@
 <?php
-
   session_start();
   $msg = $_SESSION["msg"];
   unset($_SESSION["msg"]);
@@ -10,7 +9,8 @@
 ?>
 
     <aside id="login">
-      <form action="/login_action.php" method="post">
+      <form action="../login_action.php" method="post">
+
         <label for="email">Email</label>
         <input type="text" id="user" name="email">
         <br>

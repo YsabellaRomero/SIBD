@@ -2,6 +2,7 @@
       session_start();
       $msg = $_SESSION["msg"];
       unset($_SESSION["msg"]);
+
       $title = "Criação de Password";
       include("menu.php");
 ?>
