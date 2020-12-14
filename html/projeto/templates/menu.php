@@ -20,8 +20,9 @@
           <li><a href="login.php">Log in</a></li>
           <li><a href="register.php">Create Account</a></li>
         <?php } else {?>
-          <li><a href="logout.php">Log out</a></li>
+          <li><a href="../logout_action.php">Log out</a></li>       <!-- existe login válido -->
+          <span> <?php echo $_SESSION["utilizador"]; ?></span>
         <?php } ?>
-        
+
       </ul>
     </nav>
