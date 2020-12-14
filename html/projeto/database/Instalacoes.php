@@ -1,30 +1,17 @@
 <?php
 
-  require_once('./config/init.php');
-
-  try {
     function getAllInstalacoes() {
       global $dbh;
-      $stmt = $dbh->prepare("SELECT * FROM Instalacao");
+      $stmt = $dbh->prepare('SELECT * FROM Instalacao');
       $stmt->execute();
       return $stmt->fetchAll();
     }
 
-  } catch(PDOException $e) {
-    echo $e->getMessage();
-    exit(0);
-    }
-
-  try {
-    function getInstalacoesById($id) {
+    function getInstalacoesById($instalacao) {
       global $dbh;
-      $stmt = $dbh->prepare("SELECT * FROM Instalacoes WHERE id = ?");
-      $stmt->execute(array($id));
+      $stmt = $dbh->prepare("SELECT * FROM Instalacao WHERE id = ?");
+      $stmt->execute(array($instalacao));
       return $stmt->fetch();
     }
 
-  } catch(PDOException $e) {
-    echo $e->getMessage();
-    exit(0);
-    }
 ?>

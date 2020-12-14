@@ -1,20 +1,12 @@
 <?php
-  require_once('sql/init.php');
 
-  require_once('database/Instalacoes.php');
   require_once('database/Contactos.php');
 
-  $id = $_GET['id'];
+  $instalacao = $_GET['Instalacao'];
 
-  if (!isset($id))
-    die(header('Location: list_contactos.php'));
+  $contactos = getInstalacoesById($instalacao);
 
-  $category = getInstalacoesById($id);
-
-  if (!$category)
-    die(header('Location: list_contactos.php'));
-
-  $products = getContactosByInstalacao($id);
+  $products = getContactosByInstalacao($instalacao);
 
   include('templates/menu.php');
   //include('templates/header.php');

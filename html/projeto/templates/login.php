@@ -19,6 +19,7 @@
         <br>
         <input type="submit" value="Log in">
       </form>
+      <span><?php echo $msg; ?></span>
     </aside>
 
   </body>
