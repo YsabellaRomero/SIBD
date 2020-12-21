@@ -118,7 +118,7 @@ insert into Pessoa(NIF, name, numero_telemovel, email) values (123456778, 'Carol
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456777, 'Loureço Pestana', 987654313, 'lourencopestana@my_space.com');
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456776, 'David Maia', 987654314, 'davidmaia@my_space.com');
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456775, 'Sandra Moniz', 987654315, 'sandramoniz@my_space.com');
-insert into Pessoa(NIF, name, numero_telemovel, email) values (123456774, 'Hugo7 Santos', 987654316, 'hugosantos@my_space.com');
+insert into Pessoa(NIF, name, numero_telemovel, email) values (123456774, 'Kseniya Nialepka', 987654316, 'kseniyanialepka@my_space.com');
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456773, 'André Melim', 987654317, 'andremelim@my_space.com');
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456772, 'Carlos Pinto', 987654318, 'carlospinto@my_space.com');
 insert into Pessoa(NIF, name, numero_telemovel, email) values (123456771, 'Nuno Freitas', 987654319, 'nunofreitas@my_space.com');
