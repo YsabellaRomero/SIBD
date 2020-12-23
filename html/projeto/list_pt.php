@@ -6,12 +6,12 @@
 
   $id = $_GET['id'];
   $instalacao_info = getInstalacoesById($id);
-
-  $treinadores = getAllTreinadores();
+  $treinadores = getTreinadorByInstalacao($id);
 
   $title = "Lista de Treinadores";
   include("templates/menu.php");
 
   include("templates/treino_pt.php");
+
 
 ?>

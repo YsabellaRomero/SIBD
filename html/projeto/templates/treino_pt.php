@@ -4,9 +4,9 @@
     <h3>Treinadores:</h3>
     <ul>
       <li>
-        <?php foreach ($treinadores as $treinador) { ?>
-            <h5><a href="horario_treinador.php?id=<?=$instalacao_info['id']?>&&nif=<?=$treinador['NIF']?>"><?= $treinador['name']?></a></h5>
-          <?php } ?>
+        <?php foreach ($treinadores as $treinador) {?>
+          <h5><a href="horario_treinador.php?id=<?=$instalacao_info['id']?>"><?= $treinador['name']?></a></h5>
+        <?php } ?>
       </li>
     </ul>
   </section>
