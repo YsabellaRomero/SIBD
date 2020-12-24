@@ -4,9 +4,19 @@
     <h3>Treinadores:</h3>
     <ul>
       <li>
-        <?php foreach ($treinadores as $treinador) {?>
-          <h5><a href="horario_treinador.php?id=<?=$instalacao_info['id']?>"><?= $treinador['name']?></a></h5>
-        <?php } ?>
+        <?php
+          $i = 0;
+          foreach ($treinadores as $treinador) {
+            $variable[] = $treinador['name'];
+            $i = $i + 1;
+            if( $i == 3 ) {
+              break;
+            }
+          }
+
+          foreach ($variable as &$treinador) { ?>
+              <h5><a href="horario_treinador.php?id=<?=$instalacao_info['id']?>"><?= $treinador?></a></h5>
+          <?php } ?>
       </li>
     </ul>
   </section>
