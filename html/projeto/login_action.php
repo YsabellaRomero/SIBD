@@ -1,5 +1,6 @@
 <?php
   require_once('config/init.php');
+  require_once('database/log.php');
   session_start();
 
   if(!isset($_SESSION)) {
@@ -9,15 +10,8 @@
   $email = $_POST['email'];
   $password = $_POST['password'];
 
-  function loginValido($email,$password){
-    global $dbh;
-    $stmt = $dbh->prepare('SELECT name FROM Pessoa JOIN Socio USING (NIF) WHERE email = (?) AND password = (?)');
-    $stmt->execute(array($email, sha1($password)));
-    return $stmt->fetch();          //devolve a coluna ou false
-  }
-
   $res = loginValido($email,$password);
-  
+
   if($res){
     $_SESSION["utilizador"] = $res['name'];
     $_SESSION["msg"] = "Login com sucesso";
