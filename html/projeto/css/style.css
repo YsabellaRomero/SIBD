@@ -143,76 +143,84 @@ p {
   padding: 1em;
 }
 
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-/* Month header */
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  background: #1abc9c;
-  text-align: center;
+.container-table100{
+  width:100%;
+  min-height:100vh;
+  background:#d1d1d1;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-moz-box;
+  display:-ms-flexbox
+  ;display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:33px 30px
 }
 
-/* Month list */
-.month ul {
-  margin: 0;
-  padding: 0;
-}
+  .wrap-table100{
+    width:1300px
+  }
 
-.month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
 
-/* Previous button inside month header */
-.month .prev {
-  float: left;
-  padding-top: 10px;
-}
+  table{
+    width:100%;
+    background-color:#fff
+  }
 
-/* Next button */
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
+  th,td{
+    font-weight:unset;
+    padding-right:10px
+  }
 
-/* Weekdays (Mon-Sun) */
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color:#ddd;
-}
+  .column100{
+    width:130px;
+    padding-left:25px
+  }
 
-.weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  color: #666;
-  text-align: center;
-}
+  .column100.column1{
+    width:265px;
+    padding-left:42px
+  }
 
-/* Days (1-31) */
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
+  .row100.head th{
+    padding-top:24px;
+    padding-bottom:20px
+  }
 
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
-}
+  .row100 td{
+    padding-top:18px;
+    padding-bottom:14px
+  }
 
-/* Highlight the "current" day */
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
-}
+  .table100.ver1 td{
+    font-family:Montserrat-Regular;
+    text-align: center;
+    font-size:14px;
+    color:gray;
+    line-height:1.4
+  }
+
+  .table100.ver1 th{
+    font-family:Montserrat-Medium;
+    font-size:12px;color:#fff;
+    line-height:1.4;
+    text-transform:uppercase;
+    background-color:#36304a
+  }
+
+  .table100.ver1 .row100:hover{
+    background-color:#f2f2f2
+  }
+
+  .table100.ver1 .hov-column-ver1{
+    background-color:#f2f2f2
+  }
+
+  .table100.ver1 .hov-column-head-ver1{
+    background-color:#484848!important
+  }
+
+  .table100.ver1 .row100 td:hover{
+    background-color:#6c7ae0;
+    color:#fff

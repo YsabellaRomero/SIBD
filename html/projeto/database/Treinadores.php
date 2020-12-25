@@ -7,4 +7,11 @@
     return $stmt->fetchAll();
   }
 
+  function getAllInfo($NIF) {
+     global $dbh;
+     $stmt = $dbh->prepare('SELECT * FROM Pessoa WHERE NIF = ?');
+     $stmt->execute(array($NIF));
+     return $stmt->fetch();
+   }
+
 ?>

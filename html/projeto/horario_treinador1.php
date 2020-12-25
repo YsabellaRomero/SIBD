@@ -7,15 +7,12 @@
   $id = $_GET['id'];
   $instalacao_info = getInstalacoesById($id);
 
-  //$treinadores = getAllTreinadores();
-
   $NIF = $_GET['nif'];
-
   $treinador = getAllInfo($NIF);
 
   $title = "Lista de Treinadores";
   include("templates/menu.php");
 
-  include("templates/info_treinador.php");
+  include("templates/info_treinador1.php");
 
 ?>
