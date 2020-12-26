@@ -29,6 +29,14 @@ body {
   margin-left: 1em;
 }
 
+#menu input[type=text]{
+  width: 90%;
+}
+
+#menu form {
+  margin-top: 2.5em;
+}
+
 #instalacoes  {
   margin-left: 10.5em;
   display: flex;

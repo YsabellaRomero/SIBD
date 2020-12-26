@@ -3,6 +3,9 @@
 ?>
 
 <!DOCTYPE html>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -12,8 +15,10 @@
   </head>
   <body>
     <nav id="menu">
+      <header>
+        <h1> <a href="/projeto/templates/index.php">M.Y. Space</a></h1>
+      </header>
       <ul>
-        <li><a href="/projeto/templates/index.php">Página Inicial</a></li>
         <li><a href="/projeto/list_instalacoes.php">Instalações</a></li>
         <li><a href="/projeto/templates/about.php">Sobre nós</a></li>
 
@@ -26,4 +31,9 @@
         <?php } ?>
 
       </ul>
+      <form id="search" action="/projeto/list_search.php">
+        <input type="text" name="search" placeholder="Procurar">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
     </nav>
+</body>
