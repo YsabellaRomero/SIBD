@@ -1,5 +1,7 @@
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat-Regular", serif;
+  display: flex;
+  align-items: center;
 }
 
 a {
@@ -7,13 +9,30 @@ a {
   color: black;
 }
 
-#menu {
-  background-color: black;
-  height: 100%;
-  width: 200px;
+#menu h1 {
+  text-align: center;
+  padding-left: 1em;
 }
 
-#menu li:nth-child(5) {
+#menu ul {
+  list-style-type: none;
+}
+
+#menu {
+  color: white;
+  background-color: #36304a;
+  height: 100%;
+  width: 200px;
+  border-color: white;
+  border-width: 1em;
+}
+
+#menu li:nth-child(4) {
+  font-size: 0.8em;
+  margin-left: 2em;
+}
+
+#menu span {
   font-size: 0.8em;
   margin-left: 2em;
 }
@@ -27,15 +46,19 @@ a {
 }
 
 #menu a:hover {
-  color: yellow;
+  color: #6c7ae0;
 }
 
 #menu span{
   color:white;
 }
 
+#menu button {
+  display: none;
+}
+
 #instalacoes a:hover {
-  color: red;
+  color: #6c7ae0;
 }
 
 .info h1, .about h1 {
@@ -138,7 +161,7 @@ img {
 }
 
 p {
-  font-family: "Georgia", serif;
+  font-family: "Montserrat-Regular", serif;
   line-height: 1.4em;
   padding: 1em;
 }
