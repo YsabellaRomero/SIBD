@@ -3,7 +3,7 @@
   <section class="list">
       <ul>
         <li>
-          <a href="list_pt.php?id=<?=$instalacao_info['id']?>">Treino Pessoal</a><a href="list_aulas.php?">Aulas</a></li>
+          <a href="list_pt.php?id=<?=$instalacao_info['id']?>">Treino Pessoal</a><a href="list_aulas.php?id=<?=$instalacao_info['id']?>">Aulas</a></li>
       </ul>
   </section>
 </div>

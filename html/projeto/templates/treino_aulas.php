@@ -3,21 +3,27 @@
   <section class="list">
       <ul>
         <li>
-
-          <a href="list_pt.php?">Treino Pessoal</a>
-          <a href="list_aulas.php?">Aulas</a>
-          <section class="list_modalidades">
-            <ul>
-              <li>
-                <?php foreach ($modalidades as $modalidade) { ?>
-                  <h3><a href="modalidade_info.php?"><?= $modalidade['nome']?></a></h3>
-                <?php } ?>
-              </li>
-            </ul>
-          </section>
+          <h3><a href="horario_completo.php?id=<?=$instalacao_info['id']?>">Horário Completo</a></h3>
         </li>
-      </ul>
-  </section>
-</div>
-</body>
+        <li>
+          <?php
+            $i = 0;
+            $j = 0;
+            foreach ($modalidades as $modalidade) {
+              $aulas[] = $modalidade['nome'];
+              $ids[] = $modalidade['ID'];
+              $i = $i + 1;
+              if( $i == 4 ) {
+                break;
+              }
+            }
+            foreach ($aulas as &$modalidade) {
+              $id = $ids[$j]; ?>
+              <h3><a href="horario_<?php echo $modalidade?>.php?id=<?=$instalacao_info['id']?>&id_modalidade=<?=$id?>"><?= $modalidade?></a></h3>
+            <?php $j = $j + 1;
+          } ?>
+          </li>
+        </ul>
+      </section>
+    </body>
 </html>
