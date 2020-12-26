@@ -1,5 +1,5 @@
 <section id="treinos">
-<h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a>Zumba</a></h2>
+<h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a> <?= $modalidade['nome'] ?></a></h2>
   <section class="list">
 
     <div class="container-table100">
@@ -21,7 +21,7 @@
 <tbody>
 <tr class="row100">
 <td class="column100 column1" data-column="column1">08:30-09:30</td>
-<td class="column100 column2" data-column="column2">RESERVAR</td>
+<td class="column100 column2" data-column="column2"><a href="descricao_aula.php?id=<?=$instalacao_info['id']?>&id_treino=<?=$modalidade['ID']?>&hora_inicio='08:30'">RESERVAR</td>
 <td class="column100 column3" data-column="column3">--</td>
 <td class="column100 column4" data-column="column4">--</td>
 <td class="column100 column5" data-column="column5">--</td>
@@ -36,7 +36,7 @@
 <td class="column100 column4" data-column="column4">--</td>
 <td class="column100 column5" data-column="column5">--</td>
 <td class="column100 column6" data-column="column6">--</td>
-<td class="column100 column7" data-column="column7">RESERVAR</td>
+<td class="column100 column7" data-column="column7"><a href="descricao_aula.php?id=<?=$instalacao_info['id']?>&id_treino=<?=$modalidade['ID']?>&hora_inicio='09:30'">RESERVAR</td>
 <td class="column100 column8" data-column="column8">--</td>
 </tr>
 <tr class="row100">
@@ -44,7 +44,7 @@
 <td class="column100 column2" data-column="column2">--</td>
 <td class="column100 column3" data-column="column3">--</td>
 <td class="column100 column4" data-column="column4">--</td>
-<td class="column100 column5" data-column="column5">RESERVAR</td>
+<td class="column100 column5" data-column="column5"><a href="descricao_aula.php">RESERVAR</td>
 <td class="column100 column6" data-column="column6">--</td>
 <td class="column100 column7" data-column="column7">--</td>
 <td class="column100 column8" data-column="column8">--</td>
@@ -65,14 +65,14 @@
 <td class="column100 column3" data-column="column3">--</td>
 <td class="column100 column4" data-column="column4">--</td>
 <td class="column100 column5" data-column="column5">--</td>
-<td class="column100 column6" data-column="column6">RESERVAR</td>
+<td class="column100 column6" data-column="column6"><a href="descricao_aula.php">RESERVAR</td>
 <td class="column100 column7" data-column="column7">--</td>
 <td class="column100 column8" data-column="column8">--</td>
 </tr>
 <tr class="row100">
 <td class="column100 column1" data-column="column1">13:30-14:30</td>
 <td class="column100 column2" data-column="column2">--</td>
-<td class="column100 column3" data-column="column3">RESERVAR</td>
+<td class="column100 column3" data-column="column3"><a href="descricao_aula.php">RESERVAR</td>
 <td class="column100 column4" data-column="column4">--</td>
 <td class="column100 column5" data-column="column5">--</td>
 <td class="column100 column6" data-column="column6">--</td>
@@ -93,7 +93,7 @@
 <td class="column100 column1" data-column="column1">15:30-16:30</td>
 <td class="column100 column2" data-column="column2">RESERVAR</td>
 <td class="column100 column3" data-column="column3">--</td>
-<td class="column100 column4" data-column="column4">RESERVAR</td>
+<td class="column100 column4" data-column="column4"><a href="descricao_aula.php">RESERVAR</td>
 <td class="column100 column5" data-column="column5">--</td>
 <td class="column100 column6" data-column="column6">--</td>
 <td class="column100 column7" data-column="column7">--</td>
@@ -102,9 +102,9 @@
 <tr class="row100">
 <td class="column100 column1" data-column="column1">16:30-17:30</td>
 <td class="column100 column2" data-column="column2">--</td>
-<td class="column100 column3" data-column="column3">RESERVAR</td>
+<td class="column100 column3" data-column="column3"><a href="descricao_aula.php">RESERVAR</td>
 <td class="column100 column4" data-column="column4">--</td>
-<td class="column100 column5" data-column="column5">RESERVAR</td>
+<td class="column100 column5" data-column="column5"><a href="descricao_aula.php">RESERVAR</td>
 <td class="column100 column6" data-column="column6">--</td>
 <td class="column100 column7" data-column="column7">--</td>
 <td class="column100 column8" data-column="column8">--</td>
