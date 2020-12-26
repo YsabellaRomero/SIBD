@@ -1,5 +1,5 @@
 <section id="treinos">
-<h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a>Cardio</a></h2>
+<h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a> <?= $modalidade['nome'] ?></a></h2>
   <section class="list">
 
     <div class="container-table100">

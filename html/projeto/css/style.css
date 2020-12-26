@@ -167,7 +167,7 @@ p {
 .container-table100{
   width:100%;
   min-height:100vh;
-  background:#d1d1d1;
+  background:#f2f2f2;
   display:-webkit-box;
   display:-webkit-flex;
   display:-moz-box;
@@ -245,3 +245,4 @@ p {
   .table100.ver1 .row100 td:hover{
     background-color:#6c7ae0;
     color:#fff
+}
