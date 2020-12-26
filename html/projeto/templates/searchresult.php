@@ -1,10 +1,10 @@
 <?php
   session_start();
 
-  $trein = $_SESSION["cat_mod"];
+  $mod = $_SESSION["cat_mod"];
   unset($_SESSION["cat_mod"]);
 
-  $mod = $_SESSION["cat_trein"];
+  $trein = $_SESSION["cat_trein"];
   unset($_SESSION["cat_trein"]);
 
   $info = $_SESSION["info"];
@@ -12,44 +12,54 @@
 
   $info_comp = $_SESSION["info_comp"];
   unset($_SESSION["info_comp"]);
+
+  $instalacao_info['localizacao']=$_SESSION['local_id'];
+  $instalacao_info['id'] = $_SESSION['local_id'];
+  //unset($_SESSION["local_id"]);
+
+  $id = $_SESSION["info_comp_id"];
+  unset($_SESSION["info_comp_id"]);
+
+  $nif = $_SESSION["info_comp_nif"];
+  unset($_SESSION["info_comp_id"]);
 ?>
 
     <header>
       <h1><a>Resultados Procura</a>
         <a>"<?php echo $info; ?>"</a>
+        <a> - </a>
         <a><?php echo $mod; ?></a>
         <a><?php echo $trein; ?></a>
-        <a><?php echo $info_comp; ?></a>
-        <a>para a sua localidade</a>
-
       </h1>
     </header>
 <section>
   <?php
-    //if(isset($_SESSION["cat_trein"])) {
-    if($trein != NULL){
-      foreach ($search_results as $search_result) { ?>
+    if($trein != NULL) { ?>
         <ul>
           <li>
-            <a href="list_search.php?id=<?=$search_result['name']?>">
-              <?=$search_result['name']?>
-            </a>
+            <?php if( strcmp($trein,'Francisco Monteiro') == 0 || strcmp($treinador, 'André Melim') == 0 || strcmp($treinador, 'David Maia') == 0 ) { ?>
+              <a href="horario_treinador1.php?id=<?=$instalacao_info['id']?>&nif=<?=$nif?>"><?=$info_comp?></a>
+            <?php }
+            else if( strcmp($treinador, 'Carolina Marques') == 0 || strcmp($treinador, 'Carlos Pinto') == 0 || strcmp($treinador, 'Sandra Moniz') == 0 ) { ?>
+              <a href="horario_treinador2.php?id=<?=$instalacao_info['id']?>&nif=<?=$nif?>"><?=$info_comp?></a>
+            <?php }
+            else { ?>
+              <a href="horario_treinador3.php?id=<?=$instalacao_info['id']?>&nif=<?=$nif?>"><?=$info_comp?></a>
+            <?php } ?>
           </li>
         </ul>
-  <?php } }?>
+  <?php }?>
 
   <?php
-    //if(isset($_SESSION["cat_mod"])) {
-    if($mod != NULL){
-      foreach ($search_results as $search_result) { ?>
+    if($mod != NULL){ ?>
         <ul>
           <li>
-            <a href="list_search.php?id=<?=$search_result['nome']?>">
-              <?=$search_result['nome']?>
+            <a href="horario_<?php echo $info_comp?>.php?id=<?=$instalacao_info['localizacao']?>&id_modalidade=<?=$id?>">
+              <?=$info_comp?>
             </a>
           </li>
         </ul>
-  <?php } }?>
+  <?php } ?>
 </section>
 
   </body>
