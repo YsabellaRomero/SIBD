@@ -7,19 +7,20 @@
       include("menu.php");
 ?>
 
+<header>
+  <h1>Novo Registo</h1>
+</header>
+
     <aside id="register">
       <form action="../register_action.php" method="post">
 
-        <label for="mem_num">Membership Number</label>
+        <label for="mem_num">Número de conta</label>
         <input type="text" id="mem_num" name="mem_num">
-        <br>
         <label for="email">Email</label>
         <input type="text" id="email" name="email">
-        <br>
-        <label for="pwd">Password</label>
+        <label for="pwd_reg">Password</label>
         <input type="password" id="pwd" name="password">
-        <br>
-        <input type="submit" value="Create">
+        <input type="submit" value="Criar">
       </form>
       <span><?php echo $msg; ?></span>
     </aside>

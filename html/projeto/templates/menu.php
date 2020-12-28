@@ -1,5 +1,6 @@
 <?php
   session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -22,17 +23,31 @@
         <li><a href="/projeto/list_instalacoes.php">Instalações</a></li>
         <li><a href="/projeto/templates/about.php">Sobre nós</a></li>
 
-        <?php if (!isset($_SESSION["utilizador"])){ ?>
-          <li><a href="/projeto/templates/login.php">Log in</a></li>
-          <li><a href="/projeto/templates/register.php">Create Account</a></li>
-        <?php } else {?>
+        <?php if (isset($_SESSION["utilizador"])) {?>
           <li><a href="/projeto/logout_action.php">Log out</a></li>       <!-- existe login válido -->
           <span> <?php echo $_SESSION["utilizador"]; ?></span>
         <?php } ?>
 
       </ul>
-      <form id="search" action="/projeto/list_search.php">
-        <input type="text" name="search" placeholder="Procurar">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+
+      <?php if (!isset($_SESSION["utilizador"])){ ?>
+      <aside id="login">
+        <form action="/projeto/login_action.php" method="post">
+          <label for="email">Login</label>
+          <input type="text" id="user" name="email" placeholder="email">
+          <label for="pwd"></label>
+          <input type="password" id="pwd" name="password" placeholder="password">
+          <input type="submit" value="Log in">
+        </form>
+      </aside>
+      <ul id="create_acc">
+        <li><a href="/projeto/templates/register.php">Criar Conta</a></li>
+      </ul>
+    <?php } ?>
+
+    <form id="search" action="/projeto/list_search.php">
+      <input type="text" name="search" placeholder="">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
     </nav>

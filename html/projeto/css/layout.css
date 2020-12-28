@@ -1,5 +1,4 @@
 body {
-  background-color: #f2f2f2;
   width: 60em;
 
   margin: 0;
@@ -10,8 +9,24 @@ body {
 }
 
 html, body {
+  width: 100%;                                                                 /*1 - fez alargar*/
   height: 100%;
   min-height: 100%
+  text-align: center;
+}
+
+.info, .about_us {
+  padding-top: 2em;                                                   /* 5 aumnta espaço entre titulo e texto*/
+  /*width: 75%;*/
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+#instalacoes {
+  text-align: center;
+  /*font-size: 1.5em;*/
 }
 
 #menu {
@@ -27,31 +42,167 @@ html, body {
   margin-top: 0;
 }*/
 
-.info, #login, #register, .about_us, #contactos {
+/*.info, #login, #register, .about_us, #contactos {                             2 - retirar margem (comentar)
   margin-left: 20em;
-}
+}*/
 
 .instalacoes_info, #contactos {
   margin-left: 1em;
-}
-
-#menu input[type=text]{
-  width: 90%;
 }
 
 #menu form {
   margin-top: 2.5em;
 }
 
-#instalacoes  {
+/*#login form {
+  padding-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#login {
+  background: #eceeee;
+  border: 2px solid #6c7ae0;
+  border-radius: 6px;
+  height: 15em;
+  margin: 1em auto 0;
+  width: 20em;
+}
+
+#user {
+  margin-bottom: 1em;
+}
+
+#pwd {
+  margin-bottom: 2em;
+}*/
+
+
+
+#register form {
+  padding-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#register {
+  background: #eceeee;
+  border: 2px solid #6c7ae0;
+  border-radius: 6px;
+  height: 20em;
+  margin: 1em auto 0;
+  width: 20em;
+}
+
+#mem_num {
+  margin-bottom: 1em;
+}
+
+#email {
+  margin-bottom: 1em;
+}
+
+/*#instalacoes  {
   margin-left: 10.5em;
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
-}
+}*/
 
 body > header {
-  margin-left: 20em;
+  /*margin-left: 20em;                                                                  3 tirar margem header*/
   grid-area: header / middle / stuff / end;
   text-align: center;
+}
+
+#instalacao_opcoes ul{
+  list-style-type: none;
+  text-align: center;
+  margin-top: 5em;
+}
+
+#instalacao_opcoes li {
+  font-size: 1.2em;
+  padding: 2em;
+  margin-right: 2em;
+  font-weight: bold;
+}
+
+#instalacao_opcoes li:hover {
+  /*color: #6c7ae0;*/
+  color: white;
+}
+
+#instalacao_opcoes li:first-child{
+  border-bottom: 2px solid #6c7ae0;
+}
+
+#treinos ul{
+  list-style-type: none;
+  text-align: center;
+  margin-top: 5em;
+}
+
+#treinos li {
+  font-size: 1.2em;
+  padding: 2em;
+  margin-right: 2em;
+  font-weight: bold;
+}
+
+#treinos li:hover {
+  /*color: #6c7ae0;*/
+  color: white;
+}
+
+#treinos li:first-child{
+  border-bottom: 2px solid #6c7ae0;
+}
+
+#treinos_pt ul{
+  list-style-type: none;
+  text-align: center;
+  margin-top: 5em;
+}
+
+#treinos_pt li {
+  font-size: 1.2em;
+  padding: 2em;
+  margin-right: 2em;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+#treinos_pt li:hover {
+  /*color: #6c7ae0;*/
+  color: white;
+}
+
+#treinos_pt li:first-child{
+  border-bottom: 2px solid #6c7ae0;
+}
+
+#treinos_pt li:nth-child(2){
+  border-bottom: 2px solid #6c7ae0;
+}
+
+#search_res li{
+  list-style-type: none;
+  text-align: center;
+  margin-top: 5em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#pagination{
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#pagination a {
+  margin: 0 1em;
 }

@@ -1,9 +1,9 @@
 <?php
 
-    function getAllInstalacoes() {
+    function getAllInstalacoes($page) {
       global $dbh;
-      $stmt = $dbh->prepare('SELECT * FROM Instalacao');
-      $stmt->execute();
+      $stmt = $dbh->prepare('SELECT * FROM Instalacao LIMIT ? OFFSET ?');
+      $stmt->execute(array(2, ($page-1)*2));
       return $stmt->fetchAll();
     }
 
@@ -12,6 +12,13 @@
       $stmt = $dbh->prepare('SELECT * FROM Instalacao WHERE id = ?');
       $stmt->execute(array($id));
       return $stmt->fetch();
+    }
+
+    function getNumberOfInstalacoes() {
+      global $dbh;
+      $stmt = $dbh->prepare('SELECT COUNT(*) AS count FROM Instalacao');
+      $stmt->execute();
+      return $stmt->fetch()['count'];
     }
 
 ?>

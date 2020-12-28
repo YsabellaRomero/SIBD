@@ -7,12 +7,12 @@
 
   if(!isset($_SESSION["utilizador"])){
     $_SESSION["msg"] = "Por favor faça login!";
-    header('Location: templates/login.php');
+    header('Location: templates/index.php');
+  } else {
+
+    $search = $_GET['search'];
+    $search_results = searchword($search);
   }
-
-  $search = $_GET['search'];
-
-  $search_results = searchword($search);
 
   $title = "Barra de Pesquisa";
   include("templates/menu.php");

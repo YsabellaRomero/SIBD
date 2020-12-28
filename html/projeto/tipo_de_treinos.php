@@ -3,7 +3,7 @@
 
   if(!isset($_SESSION["utilizador"])){
     $_SESSION["msg"] = "Por favor faça login!";
-    header('Location: templates/login.php');
+    header('Location: list_opcoes_instalacoes.php');
   }
   require_once('config/init.php');
   require_once('database/Instalacoes.php');
