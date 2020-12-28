@@ -14,7 +14,9 @@
 
   $search_results = searchword($search);
 
+  $title = "Barra de Pesquisa";
   include("templates/menu.php");
+  
   include("templates/searchresult.php");
 
  ?>

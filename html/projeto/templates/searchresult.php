@@ -54,7 +54,7 @@
     if($mod != NULL){ ?>
         <ul>
           <li>
-            <a href="horario_<?php echo $info_comp?>.php?id=<?=$instalacao_info['localizacao']?>&id_modalidade=<?=$id?>">
+            <a href="horario_<?php echo $info_comp?>.php?id=<?=$instalacao_info['id']?>&id_modalidade=<?=$id?>">
               <?=$info_comp?>
             </a>
           </li>
