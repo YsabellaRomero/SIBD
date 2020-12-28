@@ -1,4 +1,4 @@
-<section id="treinos">
+<section id="treinos" class="descricao">
 <h2><a href="list_instalacoes.php">Instalações</a> &gt; <a href="list_opcoes_instalacoes.php?id=<?=$instalacao_info['id']?>"><?= $instalacao_info['localizacao'] ?></a> &gt; <a href="horario_treinador<?= $th ?>.php?id=<?=$instalacao_info['id']?>&id_treino=<?=$modalidade['ID']?>&nif=<?=$treinador['NIF']?>">Treino Pessoal </a></h2>
   <section class="list">
     <h1><a> Treino Pessoal - <?=$pt[0]['hora_inicio']?></h1>

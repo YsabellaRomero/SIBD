@@ -9,40 +9,35 @@ body {
 }
 
 html, body {
-  width: 100%;                                                                 /*1 - fez alargar*/
+  width: 100%;
   height: 100%;
-  min-height: 100%
+  min-height: 100%;
+}
+
+body > header {
+  grid-area: header / middle / stuff / end;
   text-align: center;
 }
 
 .info, .about_us {
-  padding-top: 2em;                                                   /* 5 aumnta espaço entre titulo e texto*/
-  /*width: 75%;*/
+  padding-top: 2em;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
 }
 
+.instalacoes_info, #contactos {
+  margin-left: 1em;
+}
+
+
+/*bara do menu (menu.php)*/
 #menu {
   grid-area: header / start / finish / middle;
   margin: 0;
-  display: absolute;
   height: 100%;
   width: 200px;
-}
-
-/*.info, #login, #register, #instalacoes, .about_us, .instalacoes_info {
-  grid-area: stuff / middle / finish / end;
-  margin-top: 0;
-}*/
-
-/*.info, #login, #register, .about_us, #contactos {                             2 - retirar margem (comentar)
-  margin-left: 20em;
-}*/
-
-.instalacoes_info, #contactos {
-  margin-left: 1em;
 }
 
 #menu form {
@@ -50,30 +45,8 @@ html, body {
   margin-left: 0.8em;
 }
 
-/*#login form {
-  padding-top: 2em;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-#login {
-  background: #eceeee;
-  border: 2px solid #6c7ae0;
-  border-radius: 6px;
-  height: 15em;
-  margin: 1em auto 0;
-  width: 20em;
-}
-#user {
-  margin-bottom: 1em;
-}
-#pwd {
-  margin-bottom: 2em;
-}*/
 
-
-
+/*barra do registo (register.php)*/
 #register form {
   padding-top: 2em;
   display: flex;
@@ -99,23 +72,11 @@ html, body {
   margin-bottom: 1em;
 }
 
-/*#instalacoes  {
-  margin-left: 10.5em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-items: center;
-}*/
 
-body > header {
-  /*margin-left: 20em;                                                                  3 tirar margem header*/
-  grid-area: header / middle / stuff / end;
-  text-align: center;
-}
-
+/*página com a lista das instalações (list_instalacoes.php)*/
 #instalacoes {
   text-align: center;
   align-items: center;
-  /*font-size: 1.5em;*/
 }
 
 #instalacoes h3 {
@@ -128,16 +89,10 @@ body > header {
     margin-bottom: 3em;
 }
 
-/*#instalacao_opcoes {
-  display: flex;
-  flex-direction: column;
-}*/
 
+/*página de cada localização (instalacao.php)*/
 #instalacao_opcoes ul{
   list-style-type: none;
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
   text-align: center;
   margin-top: 15em;
 }
@@ -150,7 +105,6 @@ body > header {
 }
 
 #instalacao_opcoes li:hover {   /*não está a funcionar*/
-  /*color: #6c7ae0;*/
   color: white;
 }
 
@@ -158,6 +112,12 @@ body > header {
   border-bottom: 2px solid #6c7ae0;
 }
 
+#instalacao_opcoes h2 {
+  margin-left: 0.65em;
+}
+
+
+/*página com os contactos de cada localização (contactos.php)*/
 #contactos .list {
   display: flex;
   flex-wrap: wrap;
@@ -181,14 +141,29 @@ body > header {
 
 .img_contacto {
   margin-top: 3em;
-  /*display: flex;
-  flex-direction: row;
-  justify-content: space-between;*/
+}
+
+#img_contacto1 {
+  width: 27%;
+  height: 95%;
 }
 
 #img_contacto2 {
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 4em;
+  margin-right: 4em;
+  width: 27.5%;
+  height: 95%;
+}
+
+#img_contacto3 {
+  width: 27%;
+  height: 95%;
+}
+
+
+/*página com os tipos de treinos de cada localização (treinos.php)*/
+.treino_instalacoes h2 {
+  margin-left: 0.65em;
 }
 
 .treino_instalacoes ul{
@@ -205,7 +180,6 @@ body > header {
 }
 
 .treino_instalacoes li:hover {
-  /*color: #6c7ae0;*/
   color: white;
 }
 
@@ -213,9 +187,12 @@ body > header {
   border-bottom: 2px solid #6c7ae0;
 }
 
-.treinos_aulas  {
-  margin-top: 2em;
+
+/*página com a lista da modalidades (treino_aulas.php)*/
+.treinos_aulas h2{
+  margin-left: 0.65em;
 }
+
 .treinos_aulas ul{
   list-style-type: none;
   text-align: center;
@@ -230,7 +207,6 @@ body > header {
 }
 
 .treinos_aulas li:hover {
-  /*color: #6c7ae0;*/
   color: white;
 }
 
@@ -242,31 +218,43 @@ body > header {
   margin-bottom: 2.5em;
 }
 
-#treinos_pt ul{
+
+/*página com os treinadores pt de cada localização (treino_pt.php)*/
+.treinos_pt h2 {
+  margin-left: 0.65em;
+}
+.treinos_pt h3 {
+  margin-left: 0.65em;
+  font-size: 1.5em;
+}
+
+.treinos_pt ul{
   list-style-type: none;
   text-align: center;
   margin-top: 5em;
 }
 
-#treinos_pt li {
+.treinos_pt li {
   padding: 2em;
   margin-right: 2em;
   font-weight: bold;
 }
 
-#treinos_pt li:hover {
+.treinos_pt li:hover {
   /*color: #6c7ae0;*/
   color: white;
 }
 
-#treinos_pt li:first-child{
+.treinos_pt li:first-child{
   border-bottom: 2px solid #6c7ae0;
 }
 
-#treinos_pt li:nth-child(2){
+.treinos_pt li:nth-child(2){
   border-bottom: 2px solid #6c7ae0;
 }
 
+
+/*páginas com descreição das aulas (descricao_pt.php e descricao_aula.php)*/
 .descricao .list {
   text-align: center;
 }
@@ -275,6 +263,22 @@ body > header {
   margin-bottom: 1em;
 }
 
+
+/*cabeçalhos de várias páginas*/
+.horario_completo h2 , .horario_cardio h2 , .horario_crossfit h2, .horario_pilates h2, .horario_zumba h2{
+  margin-left: 0.65em;
+}
+
+.info_treinador h2 , .descricao h2 {
+  margin-left: 0.65em;
+}
+
+.info_treinador h4 {
+  margin-left: 0.9em;
+}
+
+
+/*página da apresentação do resultado da pesquisa (searchresult.php)*/
 #search_res li{
   list-style-type: none;
   text-align: center;
@@ -283,6 +287,8 @@ body > header {
   font-weight: bold;
 }
 
+
+/*paginação na página (list_instalacoes.php)*/
 #pagination{
   text-align: center;
   font-size: 1.3em;

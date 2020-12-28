@@ -1,4 +1,4 @@
-<section id="treinos">
+<section id="treinos" class="info_treinador">
 <h2><a href="list_instalacoes.php">Instalações</a> &gt; <a href="list_opcoes_instalacoes.php?id=<?=$instalacao_info['id']?>"><?= $instalacao_info['localizacao'] ?></a> &gt; <a href="list_pt.php?id=<?=$instalacao_info['id']?>">Treino Pessoal</a></h2>
   <section class="list">
 

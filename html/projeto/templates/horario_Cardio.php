@@ -1,4 +1,4 @@
-<section id="treinos">
+<section id="treinos" class="horario_cardio">
 <h2><a href="list_instalacoes.php">Instalações</a> &gt; <a href="list_opcoes_instalacoes.php?id=<?=$instalacao_info['id']?>"><?= $instalacao_info['localizacao'] ?></a> &gt; <a href="list_aulas.php?id=<?=$instalacao_info['id']?>"><?= $modalidade['nome'] ?></a></h2>
   <section class="list">
 
