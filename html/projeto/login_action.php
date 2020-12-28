@@ -22,5 +22,5 @@
     $_SESSION["msg"] = "Login falhou";
   }
 
-    header('Location: /projeto/list_instalacoes.php');
+  header('Location: /projeto/list_instalacoes.php');
 ?>

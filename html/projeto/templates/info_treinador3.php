@@ -1,5 +1,5 @@
 <section id="treinos">
-<h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a>Treino Pessoal</a></h2>
+<h2><a href="list_instalacoes.php">Instalações</a> &gt; <a href="list_opcoes_instalacoes.php?id=<?=$instalacao_info['id']?>"><?= $instalacao_info['localizacao'] ?></a> &gt; <a href="list_pt.php?id=<?=$instalacao_info['id']?>">Treino Pessoal</a></h2>
   <section class="list">
 
     <h4>Telefone: <?= $treinador['numero_telemovel']?></h4>
@@ -43,16 +43,16 @@
 <td class="column100 column4" data-column="column4">--</td>
 <td class="column100 column5" data-column="column5">--</td>
 <td class="column100 column6" data-column="column6">--</td>
-<?php $aux = $id_treino + 7; ?>
-<td class="column100 column7" data-column="column7"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
+<?php $id_treino = $aux + 21; ?>
+<td class="column100 column7" data-column="column7"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>&th=3">RESERVAR</td>
 <td class="column100 column8" data-column="column8">--</td>
 </tr>
 <tr class="row100">
 <td class="column100 column1" data-column="column1">09:30-10:30</td>
 <td class="column100 column2" data-column="column2">--</td>
 <td class="column100 column3" data-column="column3">--</td>
-<?php $aux = $id_treino + 3; ?>
-<td class="column100 column4" data-column="column4"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
+<?php $id_treino = $aux + 9; ?>
+<td class="column100 column4" data-column="column4"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>&th=3">RESERVAR</td>
 <td class="column100 column5" data-column="column5">--</td>
 <td class="column100 column6" data-column="column6">--</td>
 <td class="column100 column7" data-column="column7">--</td>
@@ -90,12 +90,12 @@
 </tr>
 <tr class="row100">
 <td class="column100 column1" data-column="column1">13:30-14:30</td>
-<?php $aux = $id_treino; ?>
-<td class="column100 column2" data-column="column2"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
+<?php $id_treino = $aux + 2; ?>
+<td class="column100 column2" data-column="column2"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>&th=3">RESERVAR</td>
 <td class="column100 column3" data-column="column3">--</td>
 <td class="column100 column4" data-column="column4">--</td>
-<?php $aux = $id_treino + 4; ?>
-<td class="column100 column5" data-column="column5"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
+<?php $id_treino = $aux + 14; ?>
+<td class="column100 column5" data-column="column5"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>&th=3">RESERVAR</td>
 <td class="column100 column6" data-column="column6">--</td>
 <td class="column100 column7" data-column="column7">--</td>
 <td class="column100 column8" data-column="column8">--</td>
@@ -103,12 +103,12 @@
 <tr class="row100">
 <td class="column100 column1" data-column="column1">14:30-15:30</td>
 <td class="column100 column2" data-column="column2">--</td>
-<?php $aux = $id_treino + 2; ?>
-<td class="column100 column3" data-column="column3"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
+<?php $id_treino = $aux + 8; ?>
+<td class="column100 column3" data-column="column3"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>&th=3">RESERVAR</td>
 <td class="column100 column4" data-column="column4">--</td>
 <td class="column100 column5" data-column="column5">--</td>
-<?php $aux = $id_treino + 6; ?>
-<td class="column100 column6" data-column="column6"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
+<?php $id_treino = $aux + 20; ?>
+<td class="column100 column6" data-column="column6"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>&th=3">RESERVAR</td>
 <td class="column100 column7" data-column="column7">--</td>
 <td class="column100 column8" data-column="column8">--</td>
 </tr>
@@ -147,16 +147,16 @@
 <td class="column100 column2" data-column="column2">--</td>
 <td class="column100 column3" data-column="column3">--</td>
 <td class="column100 column4" data-column="column4">--</td>
-<?php $aux = $id_treino + 5; ?>
-<td class="column100 column5" data-column="column5"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
+<?php $id_treino = $aux + 17; ?>
+<td class="column100 column5" data-column="column5"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>&th=3">RESERVAR</td>
 <td class="column100 column6" data-column="column6">--</td>
 <td class="column100 column7" data-column="column7">--</td>
 <td class="column100 column8" data-column="column8">--</td>
 </tr>
 <tr class="row100">
 <td class="column100 column1" data-column="column1">19:30-20:30</td>
-<?php $aux = $id_treino + 1; ?>
-<td class="column100 column2" data-column="column2"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
+<?php $id_treino = $aux + 5; ?>
+<td class="column100 column2" data-column="column2"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>&th=3">RESERVAR</td>
 <td class="column100 column3" data-column="column3">--</td>
 <td class="column100 column4" data-column="column4">--</td>
 <td class="column100 column5" data-column="column5">--</td>

@@ -1,5 +1,5 @@
     <div id="contactos">
-      <h2><a href="list_instalacoes.php?">Instalações</a> &gt; <a><?= $localizacao['localizacao'] ?></a>  &gt; <a>Contactos</a></h2>
+      <h2><a href="list_instalacoes.php?">Instalações</a> &gt; <a href="list_opcoes_instalacoes.php?id=<?=$localizacao['id']?>"><?= $localizacao['localizacao'] ?></a>  &gt; <a>Contactos</a></h2>
       <section class="list">
         <?php foreach ($contactos as $info) { ?>
           <article>

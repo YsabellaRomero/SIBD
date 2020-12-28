@@ -55,8 +55,8 @@
         <ul>
           <li>
             <a href="horario_<?php echo $termo_completo?>.php?id=<?=$instalacao_info['id']?>&id_treino=<?=$id?>">
-              <?=$termo_completo?>
-            </a>
+             <?=$termo_completo?>
+           </a>
           </li>
         </ul>
   <?php } } else { ?>

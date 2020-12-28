@@ -1,7 +1,7 @@
   <section id="treinos" class="descricao">
 
   <?php session_start(); ?>
-  <h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a> <?= $modalidade['nome']?></a></h2>
+  <h2><a href="list_instalacoes.php">Instalações</a> &gt; <a href="list_opcoes_instalacoes.php?id=<?=$instalacao_info['id']?>"><?= $instalacao_info['localizacao'] ?></a> &gt; <a href="horario_<?= $modalidade['nome'] ?>.php?id=<?=$instalacao_info['id']?>&id_treino=<?=$modalidade['ID']?>"><?= $modalidade['nome'] ?></a></h2>
     <section class="list">
       <h1><a> <?= $modalidade['nome']?> - <?=$descricao[0]['hora_inicio']?></h1>
 
@@ -32,8 +32,6 @@
               <input type="submit" value="CANCELAR">
             </form>
         <?php } ?>
-            <!-- meter o botao para cancelar aqui
-            e nesse php vais dar update pra reintroduzir a vaga e metes isto == f e ta resolvido -->
           </ul>
   </body>
 </html>

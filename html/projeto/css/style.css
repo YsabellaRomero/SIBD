@@ -132,15 +132,11 @@ a {
 /*#login input[type=text]:focus {
   width: 90%;
 }
-
 #login input[type=password]{
   width: 0%;
   -webkit-transition: margin-right 0.4s ease-in-out;
   transition: margin-right 0.4s ease-in-out;
 }
-
-
-
 #login button {
   display: none;
 }*/
@@ -189,36 +185,29 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
-
 #instalacoes .list article {
   background-color: var(--background-color-dark);
   padding: 1em; margin: 1em;
   flex-grow: 1;
-
   display: grid;
   justify-items: center;
 }
-
 #instalacoes .list article h3 {
   margin: 0;
 }
-
 #instalacoes .list article img {
   border: 1px solid #333;
   margin: 1em;
 }
-
 .instalacoes_info li {
   float: left;
 }
-
 .instalacoes_info ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-
 .instalacoes_info a, .dropbtn {
   display: inline-block;
   text-align: center;

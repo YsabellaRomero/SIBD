@@ -18,6 +18,8 @@
   $id = $_GET['id'];
   $instalacao_info = getInstalacoesById($id);
 
+  $th = $_GET['th'];
+
   $nif = $_GET['nif'];
   $treinador = getAllInfo($nif);
 

@@ -57,7 +57,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
 }
-
 #login {
   background: #eceeee;
   border: 2px solid #6c7ae0;
@@ -66,11 +65,9 @@ html, body {
   margin: 1em auto 0;
   width: 20em;
 }
-
 #user {
   margin-bottom: 1em;
 }
-
 #pwd {
   margin-bottom: 2em;
 }*/

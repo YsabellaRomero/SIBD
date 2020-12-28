@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+<section id="treinos">
+<h2><a href="list_instalacoes.php">Instalações</a> &gt; <a href="list_opcoes_instalacoes.php?id=<?=$instalacao_info['id']?>"><?= $instalacao_info['localizacao'] ?></a> &gt; <a href="tipo_de_treinos.php?id=<?=$instalacao_info['id']?>">Treino Pessoal</a></h2>
+=======
 <section id="treinos_pt">
 <h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a>Treino Pessoal</a></h2>
+>>>>>>> 6c1e9bf8ca90e3751d9ba44274ecf658ac99048b
   <section class="list">
     <h3>Treinadores:</h3>
     <ul>

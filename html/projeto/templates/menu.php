@@ -2,7 +2,6 @@
   session_start();
   $msg = $_SESSION["msg"];
   unset($_SESSION["msg"]);
-
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +44,7 @@
       <ul id="create_acc">
         <li><a href="/projeto/templates/register.php">Criar Conta</a></li>
       </ul>
-    <?php }?>
+    <?php } ?>
     <span><?php echo $msg; ?></span>
 
     <form id="search" action="/projeto/list_search.php">
