@@ -8,17 +8,27 @@
         <li>Duração: 1 hora</li>
         <br>
         <br>
-        <li>  <?php if( $pt[0]['vaga'] > 0) { ?>
+        <li>  <?php if( $pt[0]['vaga'] > 0 && (strcmp($_SESSION['reserva'][$pt[0]['ID']],'f') == 0)) { ?>
           <form action="reserva_vagas_pt.php?id=<?=$instalacao_info['id']?>" method="post">
             Livre -
             <input type='hidden' name='numero_de_vagas' value='<?php echo $pt[0]['vaga'] ?>' >
             <input type='hidden' name='id_treino' value='<?php echo $pt[0]['ID'] ?>' >
+            <input type='hidden' name='reserva' value='reserva' >
             <input type="submit" value="RESERVAR">
           </form>
         <?php }
-        else { ?>
+        else if($pt[0]['vaga'] == 0 && (strcmp($_SESSION['reserva'][$pt[0]['ID']],'t') != 0)) { ?>
           Ocupado
-        <?php } ?>
+        <?php }
+        else if((isset($_SESSION['reserva']) && (strcmp($_SESSION['reserva'][$pt[0]['ID']],'t') == 0))) { ?>
+          <form action="reserva_vagas_pt.php?id=<?=$instalacao_info['id']?>" method="post">
+            Reservado -
+            <input type='hidden' name='numero_de_vagas' value='<?php echo $pt[0]['vaga'] ?>' >
+            <input type='hidden' name='id_treino' value='<?php echo $pt[0]['ID'] ?>' >
+            <input type='hidden' name='reserva' value='cancelamento' >
+            <input type="submit" value="CANCELAR">
+          </form>
+      <?php } ?>
         </li>
       </ul>
 </body>

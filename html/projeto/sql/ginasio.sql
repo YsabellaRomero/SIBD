@@ -4,8 +4,10 @@
 PRAGMA foreign_keys = ON;
 ----------------------------------------------------Tables Dropped--------------------------------------------------------
 drop table if exists Ocorrencia;
+drop table if exists Reserva_Aula;
 drop table if exists Aula;
 drop table if exists Modalidade;
+drop table if exists Reserva_Treino_Individual;
 drop table if exists Treino_Individual;
 drop table if exists Treino;
 drop table if exists Contacto;
@@ -62,10 +64,20 @@ create table Treino_Individual(
 	hora_fim integer check(strftime('%H:%M', hora_fim) > strftime('%H:%M', hora_inicio))
 );
 
+create table Reserva_Treino_Individual(
+	num_conta integer references Pessoa,
+	ID_PT integer not null references Treino_Individual
+);
+
 create table Aula(
 	ID integer primary key,
 	id_modalidade integer references Modalidade,
 	ref_treino integer references Treino
+);
+
+create table Reserva_Aula(
+	num_conta integer references Pessoa,
+	ID_aula integer not null references Aula
 );
 
 create table Modalidade(

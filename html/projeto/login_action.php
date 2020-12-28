@@ -14,7 +14,7 @@
 
   if($res){
     $_SESSION["utilizador"] = $res['name'];
-    $_SESSION["email"] = $res['email'];
+    $_SESSION["num_conta"] = $res['numero_conta'];
     $_SESSION["local"] = $res['localizacao'];
     $_SESSION["local_id"] = $res['instalacao'];
     $_SESSION["msg"] = "Login com sucesso";

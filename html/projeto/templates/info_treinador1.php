@@ -22,7 +22,7 @@
 <div class="table100 ver1 m-b-110">
 <table data-vertable="ver1">
 <thead>
-<?php $aux = $id_treino; ?>
+<?php $aux = $id_treino;?>
 <tr class="row100 head">
 <th class="column100 column1" data-column="column1"><?= $treinador['name']?></th>
 <th class="column100 column2" data-column="column2">Segunda-feira</th>
@@ -40,9 +40,9 @@
 <td class="column100 column2" data-column="column2">--</td>
 <td class="column100 column3" data-column="column3">--</td>
 <td class="column100 column4" data-column="column4">--</td>
-<?php $id_treino = $aux + 4; ?>
+<?php $id_treino = $aux + 4;?>
 <td class="column100 column5" data-column="column5"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
-<?php $id_treino = $aux + 6; ?>
+<?php $id_treino = $aux + 6;?>
 <td class="column100 column6" data-column="column6"><a href="descricao_pt.php?id=<?=$instalacao_info['id']?>&nif=<?=$treinador['NIF']?>&id_treino=<?=$id_treino?>">RESERVAR</td>
 <td class="column100 column7" data-column="column7">--</td>
 <td class="column100 column8" data-column="column8">--</td>

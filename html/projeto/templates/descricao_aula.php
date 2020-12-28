@@ -9,21 +9,29 @@
           <li>Treinador: <?= $treinador['name'] ?></li>
           <li>Espaço: <?= $descricao[0]['espaco'] ?></li>
           <li>Duração: 1 hora</li>
-          <li>Vagas - <?= $_SESSION['vagas_aula']['vagas'] ?></li>
+          <li>Vagas - <?= $descricao[0]['vagas'] ?></li>
           <br>
           <br>
-          <li>  <?php if( $descricao[0]['vagas'] > 0 && $_SESSION['reserva'][$id_aula] != 't') { ?>
+          <li>  <?php if( $descricao[0]['vagas'] > 0 && (strcmp($_SESSION['reserva'][$id_aula],'f') == 0)) { ?>
             <form action="reserva_vagas_aulas.php?id=<?=$instalacao_info['id']?>" method="post">
               <input type='hidden' name='numero_de_vagas' value='<?php echo $descricao[0]['vagas'] ?>' >
               <input type='hidden' name='id_aula' value='<?php echo $descricao[0]['ID_aula'] ?>' >
+              <input type='hidden' name='reserva' value='reserva' >
               <input type="submit" value="RESERVAR">
             </form>
           <?php }
-          if($descricao[0]['vagas'] == 0) { ?>
+          else if($descricao[0]['vagas'] == 0 && (strcmp($_SESSION['reserva'][$id_aula],'t') != 0)) { ?>
             Sem vagas!
         <?php  }
-          if(isset($_SESSION['reserva']) && $_SESSION['reserva'][$id_aula] == 't'){ ?>
+         else if(isset($_SESSION['reserva']) && (strcmp($_SESSION['reserva'][$id_aula],'t') == 0)){ ?>
             Reservado!
+            <form action="reserva_vagas_aulas.php?id=<?=$instalacao_info['id']?>" method="post">
+              <input type='hidden' name='numero_de_vagas' value='<?php echo $descricao[0]['vagas'] ?>' >
+              <input type='hidden' name='id_aula' value='<?php echo $descricao[0]['ID_aula'] ?>' >
+              <input type='hidden' name='reserva' value='cancelamento' >
+              <input type="submit" value="CANCELAR">
+            </form>
+        <?php } ?>
             <!-- meter o botao para cancelar aqui
             e nesse php vais dar update pra reintroduzir a vaga e metes isto == f e ta resolvido -->
           </ul>

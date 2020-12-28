@@ -2,6 +2,7 @@
 
 require_once('config/init.php');
 require_once('database/Vagas.php');
+
 session_start();
 
 if(!isset($_SESSION)) {
@@ -15,14 +16,21 @@ if(!isset($_SESSION['reserva'])) {
 //lugar a ser reservado
 $vagas = $_POST['numero_de_vagas'];
 $id_aula = $_POST['id_aula'];
-$_SESSION["vaga"] = $vagas;
+$reserva = $_POST['reserva'];
 
-if( $vagas > 0 ) {
+if( $vagas > 0 && (strcmp($reserva, 'reserva') == 0)) {
   $vagas -= 1;
   Vagas_Aulas_Atualizadas($vagas, $id_aula);
-  $aux = getOcorrencia($id_aula);
-  $_SESSION['vagas_aula'] = $aux;
+  insertReservaAula($_SESSION['num_conta'], $id_aula);
   $_SESSION['reserva'][$id_aula] = 't';
+  header('Location: ' . $_SERVER['HTTP_REFERER']);
+}
+
+else if(strcmp($reserva, 'cancelamento') == 0) {
+  $vagas += 1;
+  Vagas_Aulas_Atualizadas($vagas, $id_aula);
+  deleteReservaAula($_SESSION['num_conta'], $id_aula);
+  $_SESSION['reserva'][$id_aula] = 'f';
   header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 
