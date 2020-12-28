@@ -18,11 +18,9 @@
     $_SESSION["local"] = $res['localizacao'];
     $_SESSION["local_id"] = $res['instalacao'];
     $_SESSION["msg"] = "Login com sucesso";
-    header('Location: templates/index.php');
   } else {
     $_SESSION["msg"] = "Login falhou";
-    header('Location: templates/login.php');
   }
 
-
+    header('Location: /projeto/list_instalacoes.php');
 ?>

@@ -1,4 +1,4 @@
-<section id="treinos">
+<section id="treinos" class="descricao">
 <h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a> Treino Pessoal </a></h2>
   <section class="list">
     <h1><a> Treino Pessoal - <?=$pt[0]['hora_inicio']?></h1>

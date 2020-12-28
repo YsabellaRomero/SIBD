@@ -54,13 +54,8 @@
     if($mod != NULL){ ?>
         <ul>
           <li>
-<<<<<<< Updated upstream
-            <a href="horario_<?php echo $info_comp?>.php?id=<?=$instalacao_info['id']?>&id_modalidade=<?=$id?>">
-              <?=$info_comp?>
-=======
             <a href="horario_<?php echo $termo_completo?>.php?id=<?=$instalacao_info['id']?>&id_treino=<?=$id?>">
               <?=$termo_completo?>
->>>>>>> Stashed changes
             </a>
           </li>
         </ul>

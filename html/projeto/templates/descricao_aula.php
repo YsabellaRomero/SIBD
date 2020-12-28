@@ -1,4 +1,4 @@
-  <section id="treinos">
+  <section id="treinos" class="descricao">
 
   <?php session_start(); ?>
   <h2><a href="list_instalacoes.php">Instalações</a> &gt; <a><?= $instalacao_info['localizacao'] ?></a> &gt; <a> <?= $modalidade['nome']?></a></h2>

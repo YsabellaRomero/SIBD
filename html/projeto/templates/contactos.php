@@ -9,6 +9,11 @@
             <h3>Número de telemóvel: <?= $info['numero_telemovel']?></a></h3>
           </arcticle>
         <?php } ?>
+        <div class="img_contacto">
+          <img id="img_contacto1" src="imagens/<?= $localizacao['localizacao'] ?>/interior.jpg">
+          <img id="img_contacto2" src="imagens/<?= $localizacao['localizacao'] ?>/piscina.jpg">
+          <img id="img_contacto3" src="imagens/<?= $localizacao['localizacao'] ?>/sala_maquinas.jpg">
+        </div>
       </section>
     </div>
 

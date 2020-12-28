@@ -12,7 +12,7 @@
   if(valoresValidos($mem_num,$email)){
     inserirtPass($password,$mem_num);
     $_SESSION["msg"] = "Registo efetuado com sucesso";
-    header('Location: templates/login.php');
+    header('Location: templates/index.php');
   } else {
     $_SESSION["msg"] = "Registo inválido, Número de Conta ou Email incorretos";
     header('Location: templates/register.php');

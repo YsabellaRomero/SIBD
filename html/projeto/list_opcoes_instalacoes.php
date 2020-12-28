@@ -1,8 +1,8 @@
 <?php
 
   session_start();
-  $msg = $_SESSION["msg"];
-  unset($_SESSION["msg"]);
+  /*$msg = $_SESSION["msg"];
+  unset($_SESSION["msg"]);*/
 
   require_once('config/init.php');
   require_once('database/Instalacoes.php');
@@ -17,6 +17,6 @@
 
   include("templates/instalacao.php");
 
-  echo $msg;
+  /*echo $msg;*/
 
 ?>

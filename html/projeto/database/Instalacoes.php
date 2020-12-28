@@ -3,7 +3,7 @@
     function getAllInstalacoes($page) {
       global $dbh;
       $stmt = $dbh->prepare('SELECT * FROM Instalacao LIMIT ? OFFSET ?');
-      $stmt->execute(array(2, ($page-1)*2));
+    $stmt->execute(array(1, ($page-1)*1));
       return $stmt->fetchAll();
     }
 

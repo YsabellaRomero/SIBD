@@ -4,7 +4,7 @@
   require_once('database/Instalacoes.php');
 
   $n_intalacoes = getNumberOfInstalacoes();
-  $n_pages = ceil($n_intalacoes / 2);
+  $n_pages = ceil($n_intalacoes / 1);
 
   if(isset($_GET['page'])) {
   $page = $_GET['page'];
